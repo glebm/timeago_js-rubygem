@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('zh_CN', function(number, index) {
   return [
     ['刚刚', '片刻后'],
     ['%s秒前', '%s秒后'],
@@ -15,4 +15,4 @@ module.exports = function(number, index) {
     ['1年前', '1年后'],
     ['%s年前', '%s年后']
   ][index];
-}
+})

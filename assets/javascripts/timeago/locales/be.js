@@ -1,3 +1,4 @@
+(function() {
 var seconds = formatNum.bind(null, 'секунду', '%s секунду', '%s секунды', '%s секунд'),
   minutes = formatNum.bind(null, 'хвіліну', '%s хвіліну', '%s хвіліны', '%s хвілін'),
   hours = formatNum.bind(null, 'гадзіну', '%s гадзіну', '%s гадзіны', '%s гадзін'),
@@ -6,7 +7,7 @@ var seconds = formatNum.bind(null, 'секунду', '%s секунду', '%s с
   months = formatNum.bind(null, 'месяц', '%s месяц', '%s месяцы', '%s месяцаў'),
   years = formatNum.bind(null, 'год', '%s год', '%s гады', '%s гадоў');
 
-module.exports = function(number, index) {
+var _fn = function(number, index) {
   switch(index) {
     case 0: return ['толькі што', 'праз некалькі секунд'];
     case 1: return [seconds(number) + ' таму', 'праз ' + seconds(number)];
@@ -49,3 +50,6 @@ function formatNum(f1, f, s, t, n) {
 
   return str;
 }
+
+this.timeago.register('be', _fn)
+})();

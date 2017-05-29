@@ -1,4 +1,5 @@
-module.exports = function(number, index) {
+(function() {
+var _fn = function(number, index) {
     if (index === 0) {
         return [ 'منذ لحظات', 'بعد لحظات' ];
     }
@@ -25,3 +26,5 @@ function formatTime(type, n) {
     else
         return timeTypes[type][3];
 }
+this.timeago.register('ar', _fn)
+})();

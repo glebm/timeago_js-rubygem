@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('fi', function(number, index) {
   return [
     ['juuri äsken', 'juuri nyt'],
     ['%s sekuntia sitten', '%s sekunnin päästä'],
@@ -15,4 +15,4 @@ module.exports = function(number, index) {
     ['vuosi sitten', 'vuoden päästä'],
     ['%s vuotta sitten', '%s vuoden päästä']
   ][index];
-}
+})

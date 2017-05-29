@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('eu', function(number, index) {
   return [
     ['orain', 'denbora bat barru'],
     ['duela %s segundu', '%s segundu barru'],
@@ -15,4 +15,4 @@ module.exports = function(number, index) {
     ['duela urte 1', 'urte 1 barru'],
     ['duela %s urte', '%s urte barru']
   ][index];
-}
+})

@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('sv', function(number, index) {
   return [
     ['just nu', 'om en stund'],
     ['%s sekunder sedan', 'om %s seconder'],
@@ -15,4 +15,4 @@ module.exports = function(number, index) {
     ['1 år sedan', 'om 1 år'],
     ['%s år sedan', 'om %s år']
   ][index];
-}
+})

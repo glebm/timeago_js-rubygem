@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('he', function(number, index) {
     return [
         ['זה עתה', 'עכשיו'],
         ['לפני %s שניות', 'בעוד %s שניות'],
@@ -15,4 +15,4 @@ module.exports = function(number, index) {
         ['לפני שנה', 'בעוד שנה'],
         ['לפני %s שנים', 'בעוד %s שנים']
     ][index];
-}
+})

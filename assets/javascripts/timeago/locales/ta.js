@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('ta', function(number, index) {
   return [
     ['இப்போது', 'சற்று நேரம் முன்பு'],
     ['%s நொடிக்கு முன்', '%s நொடிகளில்'],
@@ -15,4 +15,4 @@ module.exports = function(number, index) {
     ['1 வருடத்திற்கு முன்', '1 வருடத்தில்'],
     ['%s வருடங்களுக்கு முன்', '%s வருடங்களில்']
   ][index];
-}
+})

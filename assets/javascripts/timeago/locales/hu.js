@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('hu', function(number, index) {
   return [
     ['éppen most', 'éppen most'],
     ['%s másodperce', '%s másodpercen belül'],
@@ -15,4 +15,4 @@ module.exports = function(number, index) {
     ['1 éve', '1 éven belül'],
     ['%s éve', '%s éven belül']
   ][index];
-}
+})

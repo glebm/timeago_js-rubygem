@@ -1,3 +1,4 @@
+(function() {
 var seconds = formatNum.bind(null, 'секунду', '%s секунду', '%s секунди', '%s секунд'),
   minutes = formatNum.bind(null, 'хвилину', '%s хвилину', '%s хвилини', '%s хвилин'),
   hours = formatNum.bind(null, 'годину', '%s годину', '%s години', '%s годин'),
@@ -6,7 +7,7 @@ var seconds = formatNum.bind(null, 'секунду', '%s секунду', '%s с
   months = formatNum.bind(null, 'місяць', '%s місяць', '%s місяці', '%s місяців'),
   years = formatNum.bind(null, 'рік', '%s рік', '%s роки', '%s років')
 
-module.exports = function (number, index) {
+var _fn = function (number, index) {
   switch (index) {
     case 0: return ['щойно', 'через декілька секунд']
     case 1: return [seconds(number) + ' тому', 'через ' + seconds(number)]
@@ -39,3 +40,5 @@ function formatNum(f1, f, s, t, n) {
   }
   return str
 }
+this.timeago.register('uk', _fn)
+})();

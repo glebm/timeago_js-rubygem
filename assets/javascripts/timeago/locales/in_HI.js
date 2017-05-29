@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('in_HI', function(number, index) {
   return [
     ['अभी', 'कुछ समय'],
     ['%s सेकंड पहले', '%s सेकंड में'],
@@ -15,4 +15,4 @@ module.exports = function(number, index) {
     ['1 साल पहले', '1 साल में'] ,
     ['%s साल पहले','%s साल में']
   ][index];
-}
+})

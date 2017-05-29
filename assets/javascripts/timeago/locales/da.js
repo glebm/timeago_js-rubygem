@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('da', function(number, index) {
   return [
     ['for et øjeblik siden', 'om et øjeblik'],
     ['for %s sekunder siden', 'om %s sekunder'],
@@ -15,4 +15,4 @@ module.exports = function(number, index) {
     ['for 1 år siden', 'om 1 år'],
     ['for %s år siden', 'om %s år']
   ][index];
-}
+})

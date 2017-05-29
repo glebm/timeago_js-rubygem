@@ -24,13 +24,31 @@ task :update do # rubocop:disable Metrics/BlockLength
       response.error!
     end
   end
+  local_root  = 'assets/javascripts'
   remote_root = fetch['https://unpkg.com/timeago.js']
-  File.write File.join('assets/javascripts/timeago.js'),
+  File.write File.join(local_root, 'timeago.js'),
              fetch["#{remote_root}/dist/timeago.js"]
+  File.write File.join(local_root, 'timeago.locales.js'),
+             fetch["#{remote_root}/dist/timeago.locales.min.js"]
+
+  process_locale_file = lambda do |locale, src|
+    if src.start_with?('module.exports') && src.scan('function').size == 1
+      src.sub(/module\.exports\s*=\s*(.*?)\s*;?\s*\z/m,
+              "this.timeago.register('#{locale}', \\1)\n") || fail(locale)
+    else
+      <<~JS
+        (function() {
+        #{src.sub('module.exports', 'var _fn') || fail(locale)}
+        this.timeago.register('#{locale}', _fn)
+        })();
+      JS
+    end
+  end
   fetch["#{remote_root}/locales/locales.js"]
     .scan(/['"]([a-zA-Z_]+)['"]\s*,?\s*/).flatten(1).each do |locale|
-    File.write File.join('assets/javascripts/timeago/locales', "#{locale}.js"),
-               fetch["#{remote_root}/locales/#{locale}.js"]
+    File.write File.join(local_root, 'timeago', 'locales', "#{locale}.js"),
+               process_locale_file[locale,
+                                   fetch["#{remote_root}/locales/#{locale}.js"]]
   end
 
   version_path = File.join('lib/timeago_js/version.rb')

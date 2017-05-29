@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('vi', function(number, index) {
   return [
     ['vừa xong', 'một lúc'],
     ['%s giây trước', 'trong %s giây'],
@@ -15,4 +15,4 @@ module.exports = function(number, index) {
     ['1 năm trước', 'trong 1 năm'],
     ['%s năm trước', 'trong %s năm']
   ][index];
-}
+})

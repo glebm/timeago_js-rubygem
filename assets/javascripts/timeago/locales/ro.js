@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('ro', function(number, index) {
   var langTable = [
     ['chiar acum', 'chiar acum'],
     ['acum %s secunde', 'peste %s secunde'],
@@ -26,4 +26,4 @@ module.exports = function(number, index) {
     langTable[index][0].replace('%s', '%s de'),
     langTable[index][1].replace('%s', '%s de'),
   ];
-}
+})

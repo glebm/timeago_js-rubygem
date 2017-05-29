@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('in_ID', function(number, index) {
   return [
     ['baru saja', 'sebentar'],
     ['%s detik yang lalu', 'dalam %s detik'],
@@ -15,4 +15,4 @@ module.exports = function(number, index) {
     ['1 tahun yang lalu', 'dalam 1 tahun'],
     ['%s tahun yang lalu', 'dalam %s tahun']
   ][index];
-}
+})

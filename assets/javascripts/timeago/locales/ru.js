@@ -1,3 +1,4 @@
+(function() {
 var seconds = formatNum.bind(null, 'секунду', '%s секунду', '%s секунды', '%s секунд'),
   minutes = formatNum.bind(null, 'минуту', '%s минуту', '%s минуты', '%s минут'),
   hours = formatNum.bind(null, 'час', '%s час', '%s часа', '%s часов'),
@@ -6,7 +7,7 @@ var seconds = formatNum.bind(null, 'секунду', '%s секунду', '%s с
   months = formatNum.bind(null, 'месяц', '%s месяц', '%s месяца', '%s месяцев'),
   years = formatNum.bind(null, 'год', '%s год', '%s года', '%s лет');
 
-module.exports = function(number, index) {
+var _fn = function(number, index) {
   switch(index) {
     case 0: return ['только что', 'через несколько секунд'];
     case 1: return [seconds(number) + ' назад', 'через ' + seconds(number)];
@@ -49,3 +50,6 @@ function formatNum(f1, f, s, t, n) {
   
   return str;
 }
+
+this.timeago.register('ru', _fn)
+})();

@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('ml', function(number, index) {
   return [
     ['ഇപ്പോള്‍', 'കുറച്ചു മുന്‍പ്'],
     ['%s സെക്കന്റ്‌കള്‍ക്ക് മുന്‍പ്', '%s സെക്കന്റില്‍'],
@@ -15,4 +15,4 @@ module.exports = function(number, index) {
     ['1 വര്‍ഷത്തിനു  മുന്‍പ്', '1 വര്‍ഷത്തിനുള്ളില്‍'],
     ['%s വര്‍ഷങ്ങള്‍ക്കു മുന്‍പ്', '%s വര്‍ഷങ്ങള്‍ക്കുല്ല്ളില്‍']
   ][index];
-}
+})

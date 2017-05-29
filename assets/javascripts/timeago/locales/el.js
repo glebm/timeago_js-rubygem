@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('el', function(number, index) {
   return [
     ['μόλις τώρα', 'σε λίγο'],
     ['%s δευτερόλεπτα πριν', 'σε %s δευτερόλεπτα'],
@@ -15,4 +15,4 @@ module.exports = function(number, index) {
     ['1 χρόνο πριν', 'σε 1 χρόνο'],
     ['%s χρόνια πριν', 'σε %s χρόνια']
   ][index];
-}
+})

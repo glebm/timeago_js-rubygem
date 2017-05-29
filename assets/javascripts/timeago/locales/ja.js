@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('ja', function(number, index) {
   return [
     ['すこし前', 'すぐに'],
     ['%s秒前', '%s秒以内'],
@@ -15,4 +15,4 @@ module.exports = function(number, index) {
     ['1年前', '1年以内'],
     ['%s年前', '%s年以内']
   ][index];
-}
+})

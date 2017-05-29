@@ -1,4 +1,4 @@
-module.exports = function(number, index) {
+this.timeago.register('es', function(number, index) {
   return [
     ['justo ahora', 'en un rato'],
     ['hace %s segundos', 'en %s segundos'],
@@ -15,4 +15,4 @@ module.exports = function(number, index) {
     ['hace 1 año', 'en 1 año'],
     ['hace %s años', 'en %s años']
   ][index];
-};
+})
