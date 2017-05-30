@@ -26,6 +26,23 @@ Require `timeago` from your `application.js`:
 //= require timeago
 ```
 
+The above comes only with support for `en` and `zh_CN` locales.
+
+To require all the other locales:
+
+```js
+//= require timeago
+//= require timeago.locales
+```
+
+To require only certain extra locales:
+
+```js
+//= require timeago
+//= require timeago/locales/fr
+//= require timeago/locales/ru
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies.
