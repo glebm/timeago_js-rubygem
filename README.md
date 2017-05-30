@@ -9,7 +9,7 @@ Out of the box, it works with Sprockets, the Rails asset pipeline.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'timeago_js', '~> 3.0.1'
+gem 'timeago_js', '~> 3.0.1', git: 'https://github.com/glebm/timeago_js-rubygem'
 ```
 
 And then execute:
