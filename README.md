@@ -1,6 +1,6 @@
 # TimeagoJs for Ruby
 
-This gem provides [timeago.js](https://timeago.org/) assets as a Ruby gem.
+This gem provides [timeago.js](http://timeago.org/) assets as a Ruby gem.
 
 Out of the box, it works with Sprockets, the Rails asset pipeline.
 

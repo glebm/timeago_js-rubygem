@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Gleb Mazovetskiy']
   spec.email         = ['glex.spb@gmail.com']
 
-  spec.summary       = 'https://timeago.org/ scripts packaged as a Ruby gem.'
+  spec.summary       = 'http://timeago.org/ scripts packaged as a Ruby gem.'
   spec.description   = 'Out of the box, it works with Sprockets,' \
                        ' the Rails asset pipeline.'
   spec.homepage      = 'https://github.com/glebm/timeago_js-rubygem'
