@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2016 hustcc
  * License: MIT
- * Version: v3.0.0
+ * Version: v3.0.2
  * https://github.com/hustcc/timeago.js
 **/
 /* jshint expr: true */
@@ -33,7 +33,7 @@ function () {
     // second, minute, hour, day, week, month, year(365 days)
     SEC_ARRAY = [60, 60, 24, 7, 365/7/12, 12],
     SEC_ARRAY_LEN = 6,
-    ATTR_DATETIME = 'datetime',
+    // ATTR_DATETIME = 'datetime',
     ATTR_DATA_TID = 'data-tid',
     timers = {}; // real-time render timers
 
@@ -97,22 +97,25 @@ function () {
     d = d ? rst - d : rst;
     return Math.ceil(d);
   }
-  // get the datetime attribute, jQuery and DOM
+  // get the datetime attribute, `data-timeagp` / `datetime` are supported.
   function getDateAttr(node) {
-    if(node.dataset.timeago) return node.dataset.timeago; // data-timeago supported
-    return getAttr(node, ATTR_DATETIME);
+    return getAttr(node, 'data-timeago') || getAttr(node, 'datetime');
   }
+  // get the node attribute, native DOM and jquery supported.
   function getAttr(node, name) {
     if(node.getAttribute) return node.getAttribute(name); // native
     if(node.attr) return node.attr(name); // jquery
   }
+  // set the node attribute, native DOM and jquery supported.
   function setTidAttr(node, val) {
     if(node.setAttribute) return node.setAttribute(ATTR_DATA_TID, val); // native
     if(node.attr) return node.attr(ATTR_DATA_TID, val); // jquery
   }
-  function getTidFromNode(node) {
-    return getAttr(node, ATTR_DATA_TID);
-  }
+  // get the timer id of node.
+  // remove the function, can save some bytes.
+  // function getTidFromNode(node) {
+  //   return getAttr(node, ATTR_DATA_TID);
+  // }
   /**
    * timeago: the function to get `timeago` instance.
    * - nowDate: the relative date, default is new Date().
@@ -243,7 +246,7 @@ function () {
     var tid;
     // assigning in if statement to save space
     if (node) {
-      tid = getTidFromNode(node);
+      tid = getAttr(node, ATTR_DATA_TID); // get the timer of DOM node(native / jq).
       if (tid) {
         clearTimeout(tid);
         delete timers[tid];
