@@ -1,4 +1,4 @@
-this.timeago.register('hu', function(number, index) {
+window.timeago.register('hu', function(number, index) {
   return [
     ['éppen most', 'éppen most'],
     ['%s másodperce', '%s másodpercen belül'],

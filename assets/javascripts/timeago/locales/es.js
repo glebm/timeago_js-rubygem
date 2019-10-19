@@ -1,4 +1,4 @@
-this.timeago.register('es', function(number, index) {
+window.timeago.register('es', function(number, index) {
   return [
     ['justo ahora', 'en un rato'],
     ['hace %s segundos', 'en %s segundos'],

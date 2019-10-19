@@ -1,4 +1,4 @@
-this.timeago.register('ta', function(number, index) {
+window.timeago.register('ta', function(number, index) {
   return [
     ['இப்போது', 'சற்று நேரம் முன்பு'],
     ['%s நொடிக்கு முன்', '%s நொடிகளில்'],

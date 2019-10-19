@@ -25,7 +25,7 @@ task :update do # rubocop:disable Metrics/BlockLength
     end
   end
   local_root  = 'assets/javascripts'
-  remote_root = fetch['https://unpkg.com/timeago.js']
+  remote_root = fetch['https://unpkg.com/timeago.js@3']
   File.write File.join(local_root, 'timeago.js'),
              fetch["#{remote_root}/dist/timeago.js"]
   File.write File.join(local_root, 'timeago.locales.js'),
@@ -34,12 +34,12 @@ task :update do # rubocop:disable Metrics/BlockLength
   process_locale_file = lambda do |locale, src|
     if src.start_with?('module.exports') && src.scan('function').size == 1
       src.sub(/module\.exports\s*=\s*(.*?)\s*;?\s*\z/m,
-              "this.timeago.register('#{locale}', \\1)\n") || fail(locale)
+              "window.timeago.register('#{locale}', \\1)\n") || fail(locale)
     else
       <<~JS
         (function() {
         #{src.sub('module.exports', 'var _fn') || fail(locale)}
-        this.timeago.register('#{locale}', _fn)
+        window.timeago.register('#{locale}', _fn)
         })();
       JS
     end

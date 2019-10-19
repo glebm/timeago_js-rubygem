@@ -1,4 +1,4 @@
-this.timeago.register('my', function(number, index) {
+window.timeago.register('my', function(number, index) {
   return [
     ['ယခုအတွင်း', 'ယခု'],
     ['%s စက္ကန့် အကြာက', '%s စက္ကန့်အတွင်း'],

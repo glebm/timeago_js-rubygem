@@ -1,4 +1,4 @@
-this.timeago.register('eu', function(number, index) {
+window.timeago.register('eu', function(number, index) {
   return [
     ['orain', 'denbora bat barru'],
     ['duela %s segundu', '%s segundu barru'],

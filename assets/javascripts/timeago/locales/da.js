@@ -1,4 +1,4 @@
-this.timeago.register('da', function(number, index) {
+window.timeago.register('da', function(number, index) {
   return [
     ['for et øjeblik siden', 'om et øjeblik'],
     ['for %s sekunder siden', 'om %s sekunder'],

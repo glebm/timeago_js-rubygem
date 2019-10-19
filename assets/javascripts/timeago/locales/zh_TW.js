@@ -1,4 +1,4 @@
-this.timeago.register('zh_TW', function(number, index) {
+window.timeago.register('zh_TW', function(number, index) {
   return [
     ['剛剛', '片刻後'],
     ['%s秒前', '%s秒後'],

@@ -34,5 +34,5 @@ var _fn = function(number, index) {
   return l[index&1?(number%10>4||number%10<2||1===~~(number/10)%10?index:++index/2+13):index];
 };
 
-this.timeago.register('pl', _fn)
+window.timeago.register('pl', _fn)
 })();

@@ -40,5 +40,5 @@ function formatNum(f1, f, s, t, n) {
   }
   return str
 }
-this.timeago.register('uk', _fn)
+window.timeago.register('uk', _fn)
 })();

@@ -1,4 +1,4 @@
-this.timeago.register('in_HI', function(number, index) {
+window.timeago.register('in_HI', function(number, index) {
   return [
     ['अभी', 'कुछ समय'],
     ['%s सेकंड पहले', '%s सेकंड में'],

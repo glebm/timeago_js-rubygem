@@ -1,4 +1,4 @@
-this.timeago.register('in_BG', function(number, index) {
+window.timeago.register('in_BG', function(number, index) {
   return [  
   [ 'এইমাত্র' , 'একটা সময়'] ,
   [ '%s সেকেন্ড আগে', '%s এর সেকেন্ডের মধ্যে'] ,

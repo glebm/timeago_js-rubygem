@@ -1,4 +1,4 @@
-this.timeago.register('ro', function(number, index) {
+window.timeago.register('ro', function(number, index) {
   var langTable = [
     ['chiar acum', 'chiar acum'],
     ['acum %s secunde', 'peste %s secunde'],

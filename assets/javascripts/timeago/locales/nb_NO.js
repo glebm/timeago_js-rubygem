@@ -1,4 +1,4 @@
-this.timeago.register('nb_NO', function(number, index) {
+window.timeago.register('nb_NO', function(number, index) {
   return [
     ['akkurat nå', 'om litt'],
     ['%s sekunder siden', 'om %s sekunder'],

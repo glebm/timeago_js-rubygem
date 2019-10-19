@@ -1,4 +1,4 @@
-this.timeago.register('in_ID', function(number, index) {
+window.timeago.register('in_ID', function(number, index) {
   return [
     ['baru saja', 'sebentar'],
     ['%s detik yang lalu', 'dalam %s detik'],

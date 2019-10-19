@@ -1,4 +1,4 @@
-this.timeago.register('vi', function(number, index) {
+window.timeago.register('vi', function(number, index) {
   return [
     ['vừa xong', 'một lúc'],
     ['%s giây trước', 'trong %s giây'],

@@ -1,4 +1,4 @@
-this.timeago.register('sv', function(number, index) {
+window.timeago.register('sv', function(number, index) {
   return [
     ['just nu', 'om en stund'],
     ['%s sekunder sedan', 'om %s seconder'],

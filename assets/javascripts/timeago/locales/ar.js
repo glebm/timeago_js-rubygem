@@ -26,5 +26,5 @@ function formatTime(type, n) {
     else
         return timeTypes[type][3];
 }
-this.timeago.register('ar', _fn)
+window.timeago.register('ar', _fn)
 })();

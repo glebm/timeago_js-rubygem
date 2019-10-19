@@ -1,4 +1,4 @@
-this.timeago.register('th', function(number, index) {
+window.timeago.register('th', function(number, index) {
   return [
     ['เมื่อสักครู่นี้', 'อีกสักครู่'],
     ['%s วินาทีที่แล้ว', 'ใน %s วินาที'],

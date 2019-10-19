@@ -1,4 +1,4 @@
-this.timeago.register('en', function(number, index) {
+window.timeago.register('en', function(number, index) {
   return [
     ['just now', 'right now'],
     ['%s seconds ago', 'in %s seconds'],

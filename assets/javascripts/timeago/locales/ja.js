@@ -1,4 +1,4 @@
-this.timeago.register('ja', function(number, index) {
+window.timeago.register('ja', function(number, index) {
   return [
     ['すこし前', 'すぐに'],
     ['%s秒前', '%s秒以内'],

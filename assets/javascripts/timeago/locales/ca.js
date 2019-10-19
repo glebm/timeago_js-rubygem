@@ -1,4 +1,4 @@
-this.timeago.register('ca', function(number, index) {
+window.timeago.register('ca', function(number, index) {
   return [
     ['fa un moment', 'd\'aquí un moment'],
     ['fa %s segons', 'd\'aquí %s segons'],

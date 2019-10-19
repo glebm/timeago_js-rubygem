@@ -1,4 +1,4 @@
-this.timeago.register('he', function(number, index) {
+window.timeago.register('he', function(number, index) {
     return [
         ['זה עתה', 'עכשיו'],
         ['לפני %s שניות', 'בעוד %s שניות'],

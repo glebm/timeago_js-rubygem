@@ -1,4 +1,4 @@
-this.timeago.register('ko', function(number, index) {
+window.timeago.register('ko', function(number, index) {
   return [
     ['방금', '곧'],
     ['%s초 전', '%s초 후'],

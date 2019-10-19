@@ -1,4 +1,4 @@
-this.timeago.register('nl', function(number, index) {
+window.timeago.register('nl', function(number, index) {
   return [
     ['recent', 'binnenkort'],
     ['%s seconden geleden', 'binnen %s seconden'],

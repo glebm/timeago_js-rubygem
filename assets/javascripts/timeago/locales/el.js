@@ -1,4 +1,4 @@
-this.timeago.register('el', function(number, index) {
+window.timeago.register('el', function(number, index) {
   return [
     ['μόλις τώρα', 'σε λίγο'],
     ['%s δευτερόλεπτα πριν', 'σε %s δευτερόλεπτα'],

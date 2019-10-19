@@ -1,4 +1,4 @@
-this.timeago.register('pt_BR', function(number, index) {
+window.timeago.register('pt_BR', function(number, index) {
   return [
     ['agora mesmo', 'daqui um pouco'],
     ['há %s segundos', 'em %s segundos'],

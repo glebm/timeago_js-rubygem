@@ -1,4 +1,4 @@
-this.timeago.register('fa', function(number, index) {
+window.timeago.register('fa', function(number, index) {
   return [
     ['همین الآن', 'لحظاتی پیش'],
     ['%s ثانیه پیش', 'حدود %s ثانیه پیش'],

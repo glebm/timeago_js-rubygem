@@ -51,5 +51,5 @@ function formatNum(f1, f, s, t, n) {
   return str;
 }
 
-this.timeago.register('ru', _fn)
+window.timeago.register('ru', _fn)
 })();

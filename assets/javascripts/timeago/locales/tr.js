@@ -1,4 +1,4 @@
-this.timeago.register('tr', function(number, index) {
+window.timeago.register('tr', function(number, index) {
   return [
     ['az önce', 'şimdi'],
     ['%s saniye önce', '%s saniye içinde'],

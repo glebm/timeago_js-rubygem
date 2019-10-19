@@ -1,4 +1,4 @@
-this.timeago.register('ml', function(number, index) {
+window.timeago.register('ml', function(number, index) {
   return [
     ['ഇപ്പോള്‍', 'കുറച്ചു മുന്‍പ്'],
     ['%s സെക്കന്റ്‌കള്‍ക്ക് മുന്‍പ്', '%s സെക്കന്റില്‍'],

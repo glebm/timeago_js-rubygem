@@ -1,4 +1,4 @@
-this.timeago.register('zh_CN', function(number, index) {
+window.timeago.register('zh_CN', function(number, index) {
   return [
     ['刚刚', '片刻后'],
     ['%s秒前', '%s秒后'],

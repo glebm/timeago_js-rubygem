@@ -1,4 +1,4 @@
-this.timeago.register('bg', function(number, index) {
+window.timeago.register('bg', function(number, index) {
   return [
     ['току що', 'съвсем скоро'],
     ['преди %s секунди', 'след %s секунди'],

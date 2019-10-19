@@ -1,4 +1,4 @@
-this.timeago.register('fi', function(number, index) {
+window.timeago.register('fi', function(number, index) {
   return [
     ['juuri äsken', 'juuri nyt'],
     ['%s sekuntia sitten', '%s sekunnin päästä'],

@@ -1,4 +1,4 @@
-this.timeago.register('it', function(number, index) {
+window.timeago.register('it', function(number, index) {
   return [
     ['poco fa', 'tra poco'],
     ['%s secondi fa', '%s secondi da ora'],

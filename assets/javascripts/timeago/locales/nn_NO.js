@@ -1,4 +1,4 @@
-this.timeago.register('nn_NO', function(number, index) {
+window.timeago.register('nn_NO', function(number, index) {
   return [
     ['nett no', 'om litt'],
     ['%s sekund sidan', 'om %s sekund'],
