@@ -6,13 +6,8 @@
 **/
 /* jshint expr: true */
 !function (root, factory) {
-  if (typeof module === 'object' && module.exports) {
-    module.exports = factory(root); // nodejs support
-    module.exports['default'] = module.exports; // es6 support
-  }
-  else
-    root.timeago = factory(root);
-}(typeof window !== 'undefined' ? window : this,
+  root.timeago = factory(root);
+}(window,
 function () {
   var indexMapEn = 'second_minute_hour_day_week_month_year'.split('_'),
     indexMapZh = '秒_分钟_小时_天_周_月_年'.split('_'),
