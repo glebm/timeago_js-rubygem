@@ -9,7 +9,7 @@ Works with Rails out of the box.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'timeago_js', '~> 3.0.1'
+gem 'timeago_js', '~> 3.0.2'
 ```
 
 And then execute:
